@@ -27,3 +27,4 @@ endif
 
 fmt_lib = library('fmt', fmt_sources, cpp_args: opts, implicit_include_directories: false)
 
+install_headers(fmt_headers, subdir:'fmt')

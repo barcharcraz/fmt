@@ -1,8 +1,8 @@
 project('fmt', 'cpp', version: '4.0.1')
 subdir('fmt')
-
+fmt_i = include_directories('.')
 fmt_dep = declare_dependency(
- include_directories: ['.'],
+ include_directories: fmt_i,
  version: '4.0.1',
  link_with: [fmt_lib]
 )

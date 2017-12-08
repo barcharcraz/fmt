@@ -20,9 +20,9 @@ if have_open
     fmt_sources += files('posix.cc')
 endif
 
-opts = ''
+opts = []
 if get_option('default_library') == 'shared'
-   opts += '-DPRIVATE -DFMT_EXPORT -DINTERFACE -DFMT_SHARED'
+   opts += ['-DPRIVATE', '-DFMT_EXPORT', '-DINTERFACE', '-DFMT_SHARED']
 endif
 
 fmt_lib = library('fmt', fmt_sources, cpp_args: opts, implicit_include_directories: false)
